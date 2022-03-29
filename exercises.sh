@@ -11,9 +11,9 @@ bandit0
 
             ####BANDIT LVL 0 <----
 
-#1
+    #1
 cat readme
-#FLAG
+    #FLAG
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
             ####BANDIT LVL 1 <----
@@ -88,11 +88,74 @@ sort data.txt | uniq -u
 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 
             ####BANDIT LVL 9 <----
+    #1
 strings data.txt | grep "===" | awk 'NR==4 {print $2}'
-    #------
+    #2
 strings data.txt | grep "===" | awk '{print $2}' | tail -n 1
     #FLAG
 truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
             ####BANDIT LVL 10 <----
 
+    #1
+cat data.txt | base64 -d | awk 'NF{print $NF}'
+    #2
+strings data.txt | base64 -d | awk 'NF{print $NF}'
+    #FLAG
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+            ####BANDIT LVL 10 <----
+    #1
+strings data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m' | awk '{print $4}'
+    #FLAG
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+            ####BANDIT LVL 11 <----
+    #1
+cat data.txt | xxd -r > data
+file data
+#-data: gzip compressed data, was "data2.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+mv data data.gzip.gz
+gzip -d data.gzip.gz
+mv data.gzip datab
+file data
+#-data: bzip2 compressed data, block size = 900k
+cp data datab
+mv datab datab.bz
+bzip2 -d datab.bz
+file datab
+#-datab: gzip compressed data, was "data4.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+cp datab datac
+mv datac datac.gzip.gz
+gzip -d datac.gzip.gz
+mv datac.gzip datac
+file datac
+#-datac: POSIX tar archive (GNU)
+cp datac datad
+mv datad datad.tar
+tar -xf datad.tar
+mv data5.bin datae
+file datae
+#-datae: POSIX tar archive (GNU)
+cp datae datae.tar
+tar -xf datae.tar
+mv data6.bin dataf
+file dataf
+#-dataf: bzip2 compressed data, block size = 900k
+mv dataf dataf.bz
+bzip2 -d dataf.bz
+file dataf
+#-dataf: POSIX tar archive (GNU)
+cp dataf dataf.tar
+tar -xf dataf.tar
+mv data8.bin datag
+file datag
+#-datag: gzip compressed data, was "data9.bin", last modified: Thu May  7 18:14:30 2020, max compression, from Unix
+cp datag datag.gzip.gz
+gzip -d datag.gzip.gz
+mv datag.gzip.gz datag
+file datag
+#-datag: ASCII text
+cat datag | awk 'NF{print $NF}'
+    #FLAG
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
