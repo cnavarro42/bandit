@@ -104,13 +104,13 @@ strings data.txt | base64 -d | awk 'NF{print $NF}'
     #FLAG
 IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
-            ####BANDIT LVL 10 <----
+            ####BANDIT LVL 11 <----
     #1
 strings data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m' | awk '{print $4}'
     #FLAG
 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
-            ####BANDIT LVL 11 <----
+            ####BANDIT LVL 12 <----
     #1
 cat data.txt | xxd -r > data
 file data
@@ -159,3 +159,10 @@ file datag
 cat datag | awk 'NF{print $NF}'
     #FLAG
 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+            ####BANDIT LVL 13 <----
+    #1
+ssh -i sshkey.private bandit14@localhost
+cat /etc/bandit_pass/bandit14
+    #FLAG
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
