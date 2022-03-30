@@ -166,3 +166,14 @@ ssh -i sshkey.private bandit14@localhost
 cat /etc/bandit_pass/bandit14
     #FLAG
 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+            ####BANDIT LVL 14 <----
+    #1
+telnet localhost 30000
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+    #2
+nc localhost 30000
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+    #FLAG
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+            ####BANDIT LVL 15 <----
