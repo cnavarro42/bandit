@@ -177,3 +177,18 @@ nc localhost 30000
     #FLAG
 BfMYroe26WYalil77FoDi9qh59eK5xNr
             ####BANDIT LVL 15 <----
+    #1
+openssl s_client -connect localhost:30001
+    #FLAG
+cluFn7wTiGryunymYOu4RcffSxQluehd
+            ####BANDIT LVL 16 <----
+    #1
+nmap --open -T5 -v -n -p31000-32000 localhost
+openssl s_client -connect localhost:31790
+#We receive a privatekey, so we make a file:
+touch sshkey.private
+chmod 600 sshkey.private
+ssh -i sshkey.private bandit17@localhost
+
+    #FLAG
+xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
