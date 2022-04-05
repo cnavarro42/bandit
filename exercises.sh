@@ -192,3 +192,21 @@ ssh -i sshkey.private bandit17@localhost
 
     #FLAG
 xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
+            ####BANDIT LVL 17 <----
+    #1
+diff passwords.old passwords.new
+
+    #FLAG
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+            ####BANDIT LVL 18 <----
+    #1
+ssh bandit18@bandit.labs.overthewire.org -p 2220 /bin/bash
+cat readme
+    #FLAG
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+            ####BANDIT LVL 19 <----
+    #1
+./bandit20-do cat /etc/bandit_pass/bandit20
+    #FLAG
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+            ####BANDIT LVL 20 <----
