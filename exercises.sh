@@ -210,3 +210,11 @@ IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
     #FLAG
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j
             ####BANDIT LVL 20 <----
+    # we need 2 ssh connect
+#1: nc -nlvp 2000
+#2: ./suconnect 2000
+#2: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+    #FLAG
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+            ####BANDIT LVL 20 <----
+
